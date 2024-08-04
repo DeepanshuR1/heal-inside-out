@@ -24,28 +24,6 @@ const BenefitCard = styled.div`
     width: 80%;
   }
 `;
- 
-// const Benefits = () => (
-//   <BenefitsSection>
-//     <h2>Benefits of Yoga</h2>
-//     <BenefitsGrid>
-//       <BenefitCard>
-//         <img src="/yogaGirl.jpg" alt="Benefit 1" />
-//         <p>Improves flexibility</p>
-//       </BenefitCard>
-//       <BenefitCard>
-//         <img src="/yogaGirl.jpg" alt="Benefit 2" />
-//         <p>Increases muscle strength</p>
-//       </BenefitCard>
-//       <BenefitCard>
-//         <img src="/yogaGirl.jpg" alt="Benefit 3" />
-//         <p>Boosts mental health</p>
-//       </BenefitCard>
-//     </BenefitsGrid>
-//   </BenefitsSection>
-// );
- 
-// export default Benefits;
 
 import React from 'react';
  

@@ -11,6 +11,27 @@
   font-family: "Manrope", sans-serif;
 }
 
+.logo {
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+ 
+.logo:hover {
+  transform: scale(1.1);
+}
+ 
+.header {
+  background: linear-gradient(to right, #9c6644, #ba8772, #9c6644);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
