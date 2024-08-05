@@ -1,62 +1,53 @@
 "use client";
 import React from "react";
 
+const classes = [
+  {
+    title: "Holistic Healing Batch 1",
+    description:
+      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and imporve health",
+    timings: "Monday to Friday from 6:00 AM to 7:00 AM",
+    benefits: "Balances hormones, regulates metabolism, reduces stress.",
+    image: "/holistic-healing-batch.png",
+  },
+  {
+    title: "Slim & Fit Batch",
+    description:
+      "Yoga for weight loss. Dynamic sequences to burn calories and tone your body",
+    timings: "Monday to Friday from 7:00 AM to 8:00 AM",
+    benefits: "Burns calories, increases metabolism, enhances muscle tone.",
+    image: "/slim-fit-batch.png",
+  },
+  {
+    title: "Holistic Healing Batch 2",
+    description:
+      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and imporve health",
+    timings: "Monday to Friday from 6:00 AM to 7:00 AM",
+    benefits: "Balances hormones, regulates metabolism, reduces stress.",
+    image: "/holistic-healing-batch.png",
+  },
+];
+
 const Classes = () => {
   return (
     <section className="classes-section">
-      <h2 className="item__title">Our Classes</h2>
+      <h1 className="item__title">Our Classes</h1>
       <div className="classes-grid">
-        <div className="class-card">
-          <img className="class-image" src="/yogaGirl.jpg" alt="Class 1" />
-          <div className="class-content">
-            <h3>Beginner Yoga</h3>
-            <p>
-              Join our beginner-friendly yoga class to learn the basics of yoga
-              postures and breathing techniques.
-            </p>
-            <p>
-              <strong>Timings:</strong> Monday, Wednesday, Friday at 9:00 AM
-            </p>
-            <p>
-              <strong>Benefits:</strong> Improves flexibility, reduces stress,
-              enhances mindfulness.
-            </p>
+        {classes.map((cls, index) => (
+          <div className="class-card" key={index}>
+            <img className="class-image" src={cls.image} alt={`${cls.title}`} />
+            <div className="class-content">
+              <h1 className="font-bold">{cls.title}</h1>
+              <p>{cls.description}</p>
+              <p>
+                <strong>Timings:</strong> {cls.timings}
+              </p>
+              <p>
+                <strong>Benefits:</strong> {cls.benefits}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="class-card">
-          <img className="class-image" src="/yogaGirl.jpg" alt="Class 2" />
-          <div className="class-content">
-            <h3>Advanced Yoga</h3>
-            <p>
-              Take your practice to the next level with our advanced yoga class
-              focusing on strength, balance, and endurance.
-            </p>
-            <p>
-              <strong>Timings:</strong> Tuesday, Thursday at 5:00 PM
-            </p>
-            <p>
-              <strong>Benefits:</strong> Builds muscle, increases stamina,
-              promotes mental clarity.
-            </p>
-          </div>
-        </div>
-        <div className="class-card">
-          <img className="class-image" src="/yogaGirl.jpg" alt="Class 3" />
-          <div className="class-content">
-            <h3>Meditation</h3>
-            <p>
-              Discover the peace within through our meditation sessions,
-              combining guided meditation and mindfulness exercises.
-            </p>
-            <p>
-              <strong>Timings:</strong> Saturday at 10:00 AM
-            </p>
-            <p>
-              <strong>Benefits:</strong> Reduces anxiety, improves focus,
-              enhances emotional well-being.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
