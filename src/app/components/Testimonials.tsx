@@ -1,7 +1,14 @@
 "use client";
 import React, { useState } from "react";
 
-const testimonials = [
+interface Testimonial {
+  name: string;
+  review: string;
+  beforeImage: string;
+  afterImage: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     name: "John Doe",
     review: "Yoga has changed my life! I feel more energetic and focused.",
@@ -36,7 +43,7 @@ const Testimonials = () => {
   );
 };
 
-const TestimonialCard = ({ testimonial }) => {
+const TestimonialCard = ({ testimonial }: {testimonial: Testimonial}) => {
   const [sliderPosition, setSliderPosition] = useState(50); // Initial position at 50%
 
   const handleSliderChange = (e) => {
