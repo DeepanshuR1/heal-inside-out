@@ -8,7 +8,6 @@ const JoinForm = () => {
     email: "",
     message: "",
   });
-
   const [showNotification, setShowNotification] = useState(false);
 
   const handleChange = (
@@ -25,7 +24,6 @@ const JoinForm = () => {
         ...formData,
         createdAt: new Date(),
       });
-      console.log("Form submitted successfully");
       setFormData({ name: "", email: "", message: "" });
       setShowNotification(true);
     } catch (error) {
@@ -42,7 +40,6 @@ const JoinForm = () => {
       <h1>Join Us</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
@@ -51,9 +48,9 @@ const JoinForm = () => {
             onChange={handleChange}
             required
           />
+          <label htmlFor="name">Name</label>
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
@@ -62,15 +59,16 @@ const JoinForm = () => {
             onChange={handleChange}
             required
           />
+          <label htmlFor="email">Email</label>
         </div>
         <div className="form-group">
-          <label htmlFor="message">Message:</label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
           />
+          <label htmlFor="message">Message</label>
         </div>
         <button type="submit">Submit</button>
       </form>
@@ -82,18 +80,18 @@ const JoinForm = () => {
       )}
       <div className="social-media-links">
         <a
-          href="https://www.instagram.com/yourprofile"
+          href="https://www.instagram.com/heal_inside_out__?utm_source=qr&igsh=cTdrdXZ1ZDk3OXg1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram
+          <img src="instagram-color.svg" alt="Insta" className="social-icon"/>
         </a>
         <a
           href="mailto:youremail@example.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Gmail
+          <img src="gmail-color.svg" alt="Gmail" className="social-icon"/>
         </a>
       </div>
     </div>

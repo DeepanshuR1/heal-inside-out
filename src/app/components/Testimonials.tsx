@@ -10,21 +10,23 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "John Doe",
-    review: "Yoga has changed my life! I feel more energetic and focused.",
+    name: "Shalu",
+    review: `After battling asthma for 10 years, especially during winter, yoga has made a world of difference. 
+    My asthama attacks have nearly disappeared, and I haven't had one since starting yoga.`,
     beforeImage: "yogaGirl.jpg",
     afterImage: "yogaHome.jpg",
   },
   {
-    name: "Jane Smith",
-    review: "Best yoga studio ever. The instructors are amazing!",
+    name: "Manju",
+    review: "I've had PCOD for 3 years, but thanks to yoga, my cycle has been regular for the past 7 months.",
     beforeImage: "yogaHome.jpg",
     afterImage: "yogaGirl.jpg",
   },
   {
-    name: "David Brown",
+    name: "Goldy",
     review:
-      "Highly recommend Yoga Bliss to everyone. It&apos;s a life-changing experience!",
+      `Yoga has been transformative for me. I used to feel lethargic due to my weight, 
+      but since practicing yoga, I've lost weight and my energy levels are now like that of a 14-year old`,
     beforeImage: "yogaGirl.jpg",
     afterImage: "yogaHome.jpg",
   },
@@ -43,7 +45,7 @@ const Testimonials = () => {
   );
 };
 
-const TestimonialCard = ({ testimonial }: {testimonial: Testimonial}) => {
+const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   const [sliderPosition, setSliderPosition] = useState(50); // Initial position at 50%
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
