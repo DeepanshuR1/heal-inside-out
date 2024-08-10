@@ -46,8 +46,8 @@ const Testimonials = () => {
 const TestimonialCard = ({ testimonial }: {testimonial: Testimonial}) => {
   const [sliderPosition, setSliderPosition] = useState(50); // Initial position at 50%
 
-  const handleSliderChange = (e) => {
-    setSliderPosition(e.target.value);
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSliderPosition(Number(e.target.value));
   };
 
   return (
