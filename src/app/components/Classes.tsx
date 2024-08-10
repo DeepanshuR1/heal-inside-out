@@ -5,7 +5,7 @@ const classes = [
   {
     title: "Holistic Healing Batch 1",
     description:
-      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and imporve health",
+      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and imporve health.",
     timings: "Monday to Friday from 6:00 AM to 7:00 AM",
     benefits: "Balances hormones, regulates metabolism, reduces stress.",
     image: "/holistic-healing-batch.png",
@@ -13,15 +13,15 @@ const classes = [
   {
     title: "Slim & Fit Batch",
     description:
-      "Yoga for weight loss. Dynamic sequences to burn calories and tone your body",
+      "Yoga for weight loss. Dynamic sequences to burn calories and tone your body.",
     timings: "Monday to Friday from 7:00 AM to 8:00 AM",
     benefits: "Burns calories, increases metabolism, enhances muscle tone.",
-    image: "/slim-fit-batch.png",
+    image: "/slim-fit-batch1.jpeg",
   },
   {
     title: "Holistic Healing Batch 2",
     description:
-      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and imporve health",
+      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and imporve health.",
     timings: "Monday to Friday from 6:00 AM to 7:00 AM",
     benefits: "Balances hormones, regulates metabolism, reduces stress.",
     image: "/holistic-healing-batch.png",
