@@ -12,27 +12,27 @@ const testimonials: Testimonial[] = [
   {
     name: "Shalu",
     review: `After battling asthma for 10 years, especially during winter, yoga has made a world of difference. My asthma attacks have nearly disappeared, and I haven't had one since starting yoga.`,
-    beforeImage: "ShaluBefore.jpeg",
-    afterImage: "ShaluAfter.jpeg",
+    beforeImage: "ShaluBefore.png",
+    afterImage: "ShaluAfter.png",
   },
   {
     name: "Manju",
     review:
       "I've had PCOD for 3 years, but thanks to yoga, my cycle has been regular for the past 7 months.",
-    beforeImage: "ManjuBefore.jpeg",
-    afterImage: "ManjuAfter.jpeg",
+    beforeImage: "ManjuBefore.png",
+    afterImage: "ManjuAfter.png",
   },
   {
     name: "Goldy",
     review: `Yoga has been transformative for me. I used to feel lethargic due to my weight, but since practicing yoga, I've lost weight, and my energy levels are now like that of a 14-year-old.`,
-    beforeImage: "GoldyBefore.jpeg",
-    afterImage: "GoldyAfter.jpeg",
+    beforeImage: "GoldyBefore.png",
+    afterImage: "GoldyAfter.png",
   },
   {
     name: "Purnima",
     review: `Yoga and a balanced diet helped me overcome the weakness from a vitamin B12 deficiency. Now, I feel stronger, energized, and healthier than ever!`,
-    beforeImage: "PurnimaBefore.jpeg",
-    afterImage: "PurnimaAfter.jpeg",
+    beforeImage: "PurnimaBefore.png",
+    afterImage: "PurnimaAfter.png",
   },
 ];
 
