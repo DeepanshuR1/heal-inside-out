@@ -52,7 +52,7 @@ const benefits = [
  
 const Benefits = () => (
   <section className="benefits-section">
-    <h2 className="item__title">Benefits of Yoga</h2>
+    <h2>Benefits of Yoga</h2>
     <div className="benefits-grid">
       {benefits.map((benefit, index) => (
         <div key={index} className="benefit-card">

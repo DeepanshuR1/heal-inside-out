@@ -11,26 +11,35 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Shalu",
-    review: `After battling asthma for 10 years, especially during winter, yoga has made a world of difference. My asthma attacks have nearly disappeared, and I haven't had one since starting yoga.`,
+    review: `After battling asthma for 10 years, especially during winter, Heal Inside Out has made a 
+    world of difference. My asthma attacks have nearly disappeared, and I haven't had one since 
+    joining their program. The tailored approach at Heal Inside Out has truly transformed my health.`,
     beforeImage: "ShaluBefore.png",
     afterImage: "ShaluAfter.png",
   },
   {
     name: "Manju",
     review:
-      "I've had PCOD for 3 years, but thanks to yoga, my cycle has been regular for the past 7 months.",
+      `I've had PCOD for 3 years, but thanks to Heal Inside Out, my cycle has been regular for the 
+      past 7 months. Their specialized yoga sessions and holistic wellness plans have given me back 
+      control over my health.`,
     beforeImage: "ManjuBefore.png",
     afterImage: "ManjuAfter.png",
   },
   {
     name: "Goldy",
-    review: `Yoga has been transformative for me. I used to feel lethargic due to my weight, but since practicing yoga, I've lost weight, and my energy levels are now like that of a 14-year-old.`,
+    review: `Heal Inside Out has been transformative for me. I used to feel lethargic due to my weight,
+     but since joining their program and following customized diet plan, I've lost weight, and my 
+     energy levels are now like that of a 14-year-old. The personalized support, both in yoga and 
+     nutrition, at Heal Inside Out has truly revitalized my life.`,
     beforeImage: "GoldyBefore.png",
     afterImage: "GoldyAfter.png",
   },
   {
     name: "Purnima",
-    review: `Yoga and a balanced diet helped me overcome the weakness from a vitamin B12 deficiency. Now, I feel stronger, energized, and healthier than ever!`,
+    review: `Heal Inside Out, combined with a customized diet plan helped me overcome the weakness 
+    from a vitamin B12 deficiency. Now, I feel stronger, energized, and healthier than ever! 
+    The tailored approach in both yoga and nutrition at Heal Inside Out made all the difference.`,
     beforeImage: "PurnimaBefore.png",
     afterImage: "PurnimaAfter.png",
   },

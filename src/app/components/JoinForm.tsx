@@ -7,11 +7,15 @@ const JoinForm = () => {
     name: "",
     email: "",
     message: "",
+    batch: "",
   });
+
   const [showNotification, setShowNotification] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -24,7 +28,12 @@ const JoinForm = () => {
         ...formData,
         createdAt: new Date(),
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        batch: "",
+      });
       setShowNotification(true);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -37,7 +46,7 @@ const JoinForm = () => {
 
   return (
     <div className="join-container">
-      <h1>Join Us</h1>
+      <h1>Join Our Wellness Journey</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input
@@ -48,7 +57,7 @@ const JoinForm = () => {
             onChange={handleChange}
             required
           />
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Your Full Name</label>
         </div>
         <div className="form-group">
           <input
@@ -59,7 +68,33 @@ const JoinForm = () => {
             onChange={handleChange}
             required
           />
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Your Email Address</label>
+        </div>
+        <div className="form-group">
+          <select
+            id="batch"
+            name="batch"
+            value={formData.batch}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>
+              Select Your Batch
+            </option>
+            <option value="Holistic Healing Morning Batch">
+              Holistic Healing Morning Batch
+            </option>
+            <option value="Holistic Healing Evening Batch">
+              Holistic Healing Evening Batch
+            </option>
+            <option value="Weight Loss Morning Batch">
+              Weight Loss Morning Batch
+            </option>
+            <option value="Weight Loss Evening Batch">
+              Weight Loss Evening Batch
+            </option>
+          </select>
+          <label htmlFor="batch">Preferred Batch</label>
         </div>
         <div className="form-group">
           <textarea
@@ -68,14 +103,29 @@ const JoinForm = () => {
             value={formData.message}
             onChange={handleChange}
           />
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">
+            How can we assist you on your wellness journey?
+          </label>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Begin Your Journey</button>
       </form>
       {showNotification && (
-        <div className="notification">
-          <p>Form submitted successfully!</p>
-          <button onClick={handleCloseNotification}>Close</button>
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Thank You!</h2>
+            <p>
+              Your journey towards wellness has begun. We have received your
+              response and we will review your information shortly. We look
+              forward to guiding you on this path to a healthier, more balanced
+              life.
+            </p>
+
+            <p>
+              If you have any further questions, feel free to reach out to us
+              through our social media handles.
+            </p>
+            <button onClick={handleCloseNotification}>Close</button>
+          </div>
         </div>
       )}
       <div className="social-media-links">
@@ -84,14 +134,14 @@ const JoinForm = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="instagram-color.svg" alt="Insta" className="social-icon"/>
+          <img src="instagram-color.svg" alt="Insta" className="social-icon" />
         </a>
         <a
           href="mailto:youremail@example.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="gmail-color.svg" alt="Gmail" className="social-icon"/>
+          <img src="gmail-color.svg" alt="Gmail" className="social-icon" />
         </a>
       </div>
     </div>

@@ -6,7 +6,7 @@ const About = () => (
       <img src="/yogaGirl.jpg" alt="about us" />
     </div>
     <div className="about-content">
-      <h2 className="item__title">About Us</h2>
+      <h2>About Us</h2>
       <p>
         Elevate your well-being with Heal Inside Out. Our certified Yoga
         Counselor, boasting 5 years of hands-on expertise, blends the timeless
