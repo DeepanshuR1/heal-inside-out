@@ -62,7 +62,16 @@ const Benefits = () => (
         </div>
       ))}
     </div>
+    <div className="feature-banner">
+        <h2>Exclusive Benefits</h2>
+        <p>
+          Join our classes and receive personalized plans to heal lifestyle
+          diseases like thyroid, PCOD, PCOS, and diabetes.
+        </p>
+        <p>Includes a customized diet plan for holistic well-being.</p>
+      </div>
   </section>
+
 );
  
 export default Benefits;

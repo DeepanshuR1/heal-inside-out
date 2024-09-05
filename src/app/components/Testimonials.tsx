@@ -11,16 +11,15 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Shalu",
-    review: `After battling asthma for 10 years, especially during winter, Heal Inside Out has made a 
+    review: `After battling asthma for 10 years, especially during winter, <strong>Heal Inside Out</strong> has made a 
     world of difference. My asthma attacks have nearly disappeared, and I haven't had one since 
-    joining their program. The tailored approach at Heal Inside Out has truly transformed my health.`,
+    joining their program. The tailored approach at <strong>Heal Inside Out</strong> has truly transformed my health.`,
     beforeImage: "ShaluBefore.png",
     afterImage: "ShaluAfter.png",
   },
   {
     name: "Manju",
-    review:
-      `I've had PCOD for 3 years, but thanks to Heal Inside Out, my cycle has been regular for the 
+    review: `I've had PCOD for 3 years, but thanks to <strong>Heal Inside Out</strong>, my cycle has been regular for the 
       past 7 months. Their specialized yoga sessions and holistic wellness plans have given me back 
       control over my health.`,
     beforeImage: "ManjuBefore.png",
@@ -28,18 +27,18 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Goldy",
-    review: `Heal Inside Out has been transformative for me. I used to feel lethargic due to my weight,
+    review: `<strong>Heal Inside Out</strong> has been transformative for me. I used to feel lethargic due to my weight,
      but since joining their program and following customized diet plan, I've lost weight, and my 
      energy levels are now like that of a 14-year-old. The personalized support, both in yoga and 
-     nutrition, at Heal Inside Out has truly revitalized my life.`,
+     nutrition, at <strong>Heal Inside Out</strong> has truly revitalized my life.`,
     beforeImage: "GoldyBefore.png",
     afterImage: "GoldyAfter.png",
   },
   {
     name: "Purnima",
-    review: `Heal Inside Out, combined with a customized diet plan helped me overcome the weakness 
+    review: `<strong>Heal Inside Out</strong>, combined with a customized diet plan helped me overcome the weakness 
     from a vitamin B12 deficiency. Now, I feel stronger, energized, and healthier than ever! 
-    The tailored approach in both yoga and nutrition at Heal Inside Out made all the difference.`,
+    The tailored approach in both yoga and nutrition at <strong>Heal Inside Out</strong> made all the difference.`,
     beforeImage: "PurnimaBefore.png",
     afterImage: "PurnimaAfter.png",
   },
@@ -183,7 +182,7 @@ const BeforeAfterCard = ({ testimonial }: { testimonial: Testimonial }) => {
       </div>
       <div className="testimonial-content">
         <h3>{testimonial.name}</h3>
-        <p>{testimonial.review}</p>
+        <p dangerouslySetInnerHTML={{ __html: testimonial.review }} />
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 "use client";
+import Image from "next/image";
 
 const About = () => (
   <section className="about-section">
     <div className="about-image">
-      <img src="/yogaGirl.jpg" alt="about us" />
+      <Image src="/yogaGirl.jpg" alt="about us" width={400} height={400}/>
     </div>
     <div className="about-content">
       <h2>About Us</h2>

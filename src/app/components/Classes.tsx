@@ -1,131 +1,89 @@
-"use client";
 import Link from "next/link";
-import React, { useState } from "react";
-import { FaHeartbeat, FaLeaf } from "react-icons/fa";
 
-const classes = [
+const pricingPlans = [
   {
-    title: "Holistic Healing Batch",
-    description:
-      "Yoga for thyroid, PCOD, PCOS, and diabetes. Gentle poses and breathing techniques to balance hormones and improve health.",
-    timings: ["Morning: 6:00 AM - 7:00 AM", "Evening: 6:00 PM - 7:00 PM"],
+    title: "Monthly Plan",
+    price: "₹3,000",
+    oldPrice: "₹4,000",
+    discount: "25% OFF",
+    timePeriod: "Valid for 30 Days",
     benefits: [
-      "Balances hormones",
-      "Regulates metabolism",
-      "Reduces stress",
-      "Healing lifestyle diseases: Thyroid, PCOD, PCOS, Diabetes",
-      "Personalized diet plan",
+      "Unlimited Yoga & Meditation",
+      "Personalized Diet Plans",
+      "Healing Workshops",
+      "Progress Tracking",
+      "Flexible Batches",
     ],
-    image: "/holistic-healing-batch.png",
-    pricing: {
-      monthly: "₹3000",
-      threeMonths: "₹7500",
-      sixMonths: "₹14000",
-    },
+    bestValue: false,
   },
   {
-    title: "Weight Loss Batch",
-    description:
-      "Yoga designed to promote weight loss through dynamic sequences that burn calories, increase metabolism, and enhance overall body tone.",
-    timings: ["Morning: 7:00 AM - 8:00 AM", "Evening: 7:00 PM - 8:00 PM"],
+    title: "Quarterly Plan",
+    price: "₹7,500",
+    oldPrice: "₹10,000",
+    discount: "25% OFF",
+    timePeriod: "Valid for 90 Days",
     benefits: [
-      "Effective weight management",
-      "Boosts metabolism",
-      "Improves muscle tone and flexibility",
-      "Healing lifestyle diseases: Thyroid, PCOD, PCOS, Diabetes",
-      "Personalized diet plan",
+      "Unlimited Yoga & Meditation",
+      "Personalized Diet Plans",
+      "Healing Workshops",
+      "Progress Tracking",
+      "Flexible Batches",
+      "Nutrition Sessions",
     ],
-    image: "/weight-loss.png",
-    pricing: {
-      monthly: "₹3000",
-      threeMonths: "₹7500",
-      sixMonths: "₹14000",
-    },
+    bestValue: false,
+  },
+  {
+    title: "Half-Yearly Plan",
+    price: "₹14,000",
+    oldPrice: "₹20,000",
+    discount: "30% OFF",
+    timePeriod: "Valid for 180 Days",
+    benefits: [
+      "Unlimited Yoga & Meditation",
+      "Personalized Diet Plans",
+      "Healing Workshops",
+      "Progress Tracking",
+      "Flexible Batches",
+      "Nutrition Sessions",
+    ],
+    bestValue: true,
   },
 ];
 
-const Classes = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAccordion = (index: any) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  return (
-    <section className="classes-section">
-      <div className="feature-banner">
-        <h2>Exclusive Benefits</h2>
-        <p>
-          Join our classes and receive personalized plans to heal lifestyle
-          diseases like thyroid, PCOD, PCOS, and diabetes.
-        </p>
-        <p>Includes a customized diet plan for holistic well-being.</p>
-      </div>
-
-      <h1 className="class-title">Our Classes</h1>
-      <div className="classes-grid">
-        {classes.map((cls, index) => (
-          <div className="class-card" key={index}>
-            <img className="class-image" src={cls.image} alt={`${cls.title}`} />
-            <div className="class-content">
-              <h1 className="font-bold">{cls.title}</h1>
-              <p>{cls.description}</p>
-              <div className="class-timings">
-                <strong>Timings:</strong>
-                <ul>
-                  {cls.timings.map((time, idx) => (
-                    <li key={idx} className="timing-item">
-                      {time}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="class-benefits">
-                <strong>Benefits:</strong>
-                <ul>
-                  {cls.benefits.map((benefit, idx) => (
-                    <li key={idx} className="benefit-item">
-                      {idx < 3 ? (
-                        <FaHeartbeat className="benefit-icon" />
-                      ) : (
-                        <FaLeaf className="benefit-icon" />
-                      )}
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="accordion">
-                <div
-                  className="accordion-title"
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <h3>Healing & Wellness Plans</h3>
-                  <span>{activeIndex === index ? "-" : "+"}</span>
-                </div>
-                {activeIndex === index && (
-                  <div className="accordion-content">
-                    <p>
-                      <strong>Monthly Plan:</strong> {cls.pricing.monthly}
-                    </p>
-                    <p>
-                      <strong>3-Month Plan:</strong> {cls.pricing.threeMonths}
-                    </p>
-                    <p>
-                      <strong>6-Month Plan:</strong> {cls.pricing.sixMonths}
-                    </p>
-                  </div>
-                )}
-              </div>
-              <Link className="join-now-button" href="/join">
-                Start Your Healing Journey
-              </Link>
-            </div>
+const Classes = () => (
+  <div className="pricing-section">
+    <h1 className="section-title">Your Path to Inner Peace</h1>
+    <p className="description">
+      Choose from our plans to rejuvenate your mind, body, and soul.
+    </p>
+    <div className="pricing-grid">
+      {pricingPlans.map((plan, index) => (
+        <div
+          key={index}
+          className={`pricing-card ${plan.bestValue ? "best-value" : ""}`}
+        >
+          {plan.bestValue && <div className="popular-tag">Most Popular</div>}
+          <h3>{plan.title}</h3>
+          <div className="pricing">
+            <span className="current-price">{plan.price}</span>
+            <span className="old-price">{plan.oldPrice}</span>
           </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+          <div className="discount-tag">{plan.discount}</div>
+          <Link className="join-now-button" href="/join">
+            Join Now
+          </Link>
+          <p className="time-period">{plan.timePeriod}</p>
+          <ul className="benefits-list">
+            {plan.benefits.map((benefit, idx) => (
+              <li key={idx}>
+                <span className="benefit-check">✔</span> {benefit}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 
 export default Classes;

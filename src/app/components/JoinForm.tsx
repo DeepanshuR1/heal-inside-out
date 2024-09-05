@@ -81,18 +81,8 @@ const JoinForm = () => {
             <option value="" disabled>
               Select Your Batch
             </option>
-            <option value="Holistic Healing Morning Batch">
-              Holistic Healing Morning Batch
-            </option>
-            <option value="Holistic Healing Evening Batch">
-              Holistic Healing Evening Batch
-            </option>
-            <option value="Weight Loss Morning Batch">
-              Weight Loss Morning Batch
-            </option>
-            <option value="Weight Loss Evening Batch">
-              Weight Loss Evening Batch
-            </option>
+            <option value="Morning Batch">Morning Batch</option>
+            <option value="Evening Batch">Evening Batch</option>
           </select>
           <label htmlFor="batch">Preferred Batch</label>
         </div>
@@ -137,11 +127,11 @@ const JoinForm = () => {
           <img src="instagram-color.svg" alt="Insta" className="social-icon" />
         </a>
         <a
-          href="mailto:youremail@example.com"
+          href="https://wa.me/7827029302?text=Hello%20Heal%20Inside%20Out!%20I%20would%20like%20to%20know%20more%20about%20your%20programs."
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="gmail-color.svg" alt="Gmail" className="social-icon" />
+          <img src="whatsapp.svg" alt="Gmail" className="social-icon" />
         </a>
       </div>
     </div>
