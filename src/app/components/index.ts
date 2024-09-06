@@ -8,6 +8,7 @@ import Benefits from "./Benefits";
 import Testimonials from "./Testimonials";
 import Classes from "./Classes";
 import ClassDetails from "./ClassDetails";
+import PopularPlanPopup from "./PopularPlanPopup";
 
 export {
   NavBar,
@@ -19,4 +20,5 @@ export {
   Testimonials,
   Classes,
   ClassDetails,
+  PopularPlanPopup
 };

@@ -10,7 +10,7 @@ const About = () => (
       <h2>About Us</h2>
       <p>
         Elevate your well-being with Heal Inside Out. Our certified Yoga
-        Counselor, boasting 5 years of hands-on expertise, blends the timeless
+        Counselor, with 5 years of hands-on expertise, blends the timeless
         power of yoga with modern wellness strategies to help you thrive. Every
         session is a tailored experience, designed to unlock your full
         potential, boost your energy, and bring harmony to your life. Discover

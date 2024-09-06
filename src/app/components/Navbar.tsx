@@ -5,7 +5,7 @@ const NavBar = () => (
   <header className="header">
     <nav className="max-w-[1440px] mx-auto flex justify-center items-center px-6">
       <Link href="/" className="flex justify-center items-center">
-        <Image src="/image.png" alt="Yoga logo" width={80} height={80} className="logo" />
+        <Image src="/appLogo.jpeg" alt="Yoga logo" width={80} height={80} className="logo" />
       </Link>
     </nav>
   </header>

@@ -1,4 +1,4 @@
-import { NavBar } from "./components";
+import { NavBar, PopularPlanPopup } from "./components";
 import "./globals.css";
 import Image from "next/image";
 export const metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="image.png" />
+        <link rel="icon" href="appLogo.jpeg" />
       </head>
       <body className="relative">
         <NavBar />
@@ -24,10 +24,16 @@ export default function RootLayout({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src="whatsapp.svg" width={50} height={50} alt="whatsapp image" />
+            <Image
+              src="whatsapp.svg"
+              width={50}
+              height={50}
+              alt="whatsapp image"
+            />
           </a>
         </div>
         <main className="my-container bg-orange-100">{children}</main>
+        <PopularPlanPopup />
       </body>
     </html>
   );

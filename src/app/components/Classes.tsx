@@ -2,44 +2,13 @@ import Link from "next/link";
 
 const pricingPlans = [
   {
-    title: "Monthly Plan",
-    price: "₹3,000",
-    oldPrice: "₹4,000",
-    discount: "25% OFF",
-    timePeriod: "Valid for 30 Days",
-    benefits: [
-      "Unlimited Yoga & Meditation",
-      "Personalized Diet Plans",
-      "Healing Workshops",
-      "Progress Tracking",
-      "Flexible Batches",
-    ],
-    bestValue: false,
-  },
-  {
-    title: "Quarterly Plan",
-    price: "₹7,500",
-    oldPrice: "₹10,000",
-    discount: "25% OFF",
-    timePeriod: "Valid for 90 Days",
-    benefits: [
-      "Unlimited Yoga & Meditation",
-      "Personalized Diet Plans",
-      "Healing Workshops",
-      "Progress Tracking",
-      "Flexible Batches",
-      "Nutrition Sessions",
-    ],
-    bestValue: false,
-  },
-  {
     title: "Half-Yearly Plan",
     price: "₹14,000",
     oldPrice: "₹20,000",
     discount: "30% OFF",
     timePeriod: "Valid for 180 Days",
     benefits: [
-      "Unlimited Yoga & Meditation",
+      "Yoga & Meditation Classes",
       "Personalized Diet Plans",
       "Healing Workshops",
       "Progress Tracking",
@@ -48,10 +17,41 @@ const pricingPlans = [
     ],
     bestValue: true,
   },
+  {
+    title: "Quarterly Plan",
+    price: "₹7,500",
+    oldPrice: "₹10,000",
+    discount: "25% OFF",
+    timePeriod: "Valid for 90 Days",
+    benefits: [
+      "Yoga & Meditation Classes",
+      "Personalized Diet Plans",
+      "Healing Workshops",
+      "Progress Tracking",
+      "Flexible Batches",
+      "Nutrition Sessions",
+    ],
+    bestValue: false,
+  },
+  {
+    title: "Monthly Plan",
+    price: "₹3,000",
+    oldPrice: "₹4,000",
+    discount: "25% OFF",
+    timePeriod: "Valid for 30 Days",
+    benefits: [
+      "Yoga & Meditation Classes",
+      "Personalized Diet Plans",
+      "Healing Workshops",
+      "Progress Tracking",
+      "Flexible Batches",
+    ],
+    bestValue: false,
+  },
 ];
 
 const Classes = () => (
-  <div className="pricing-section">
+  <div id="classes" className="pricing-section">
     <h1 className="section-title">Your Path to Inner Peace</h1>
     <p className="description">
       Choose from our plans to rejuvenate your mind, body, and soul.
