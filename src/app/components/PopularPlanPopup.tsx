@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const PopularPlanPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const mostPopularRef = useRef(null); // Reference for "Most Popular" tag
+  const mostPopularRef = useRef<HTMLDivElement>(null); // Reference for "Most Popular" tag
 
   useEffect(() => {
     const timer = setTimeout(() => {
